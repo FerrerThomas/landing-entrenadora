@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
     return (
-        <section className="w-full max-w-6xl px-4 sm:px-10 py-16 sm:py-24">
+        <section className="w-full max-w-6xl px-4 sm:px-10 py-8 sm:py-24">
             <div className="@container">
                 <div className="flex flex-col-reverse gap-8 md:flex-row md:items-center">
                     <motion.div
