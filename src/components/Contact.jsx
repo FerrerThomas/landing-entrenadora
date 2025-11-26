@@ -17,15 +17,15 @@ export default function Contact() {
                 <form className="mt-10 max-w-2xl mx-auto space-y-6">
                     <div>
                         <label className="sr-only" htmlFor="name">Nombre</label>
-                        <input autoComplete="name" className="block w-full rounded border-primary/30 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary py-3 px-4" id="name" name="name" placeholder="Tu Nombre" type="text" />
+                        <input autoComplete="name" className="block w-full rounded border-primary/30 bg-primary/5 dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary py-3 px-4" id="name" name="name" placeholder="Tu Nombre" type="text" />
                     </div>
                     <div>
                         <label className="sr-only" htmlFor="email">Email</label>
-                        <input autoComplete="email" className="block w-full rounded border-primary/30 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary py-3 px-4" id="email" name="email" placeholder="Tu Email" type="email" />
+                        <input autoComplete="email" className="block w-full rounded border-primary/30 bg-primary/5 dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary py-3 px-4" id="email" name="email" placeholder="Tu Email" type="email" />
                     </div>
                     <div>
                         <label className="sr-only" htmlFor="message">Mensaje</label>
-                        <textarea className="block w-full rounded border-primary/30 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary py-3 px-4" id="message" name="message" placeholder="Tu Mensaje" rows="4"></textarea>
+                        <textarea className="block w-full rounded border-primary/30 bg-primary/5 dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary py-3 px-4" id="message" name="message" placeholder="Tu Mensaje" rows="4"></textarea>
                     </div>
                     <div className="text-center">
                         <button className="flex w-full sm:w-auto sm:px-10 cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors" type="submit">
