@@ -12,7 +12,7 @@ export default function Header() {
                             <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"></path>
                         </svg>
                     </div>
-                    <h2 className="text-lg font-bold leading-tight tracking-[-0.015em] text-[#181113] dark:text-white/90">Entrenadora Personal</h2>
+                    <h2 className="text-lg font-bold leading-tight tracking-[-0.015em] text-[#181113] dark:text-white/90">Cielo</h2>
                 </div>
                 <nav className="hidden md:flex flex-1 justify-end gap-8">
                     <div className="flex items-center gap-9">
@@ -21,9 +21,14 @@ export default function Header() {
                         <a className="text-[#181113] dark:text-white/80 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#rutinas">Rutinas</a>
                         <a className="text-[#181113] dark:text-white/80 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#contacto">Contáctame</a>
                     </div>
-                    <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors">
+                    <a
+                        href="https://wa.me/5492215048825?text=Hola%20Cielo%2C%20vengo%20de%20la%20web"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors"
+                    >
                         <span className="truncate">Empieza Ahora</span>
-                    </button>
+                    </a>
                 </nav>
                 <button className="md:hidden p-2 rounded-full hover:bg-primary/10" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     <span className="material-symbols-outlined text-[#181113] dark:text-white/90">menu</span>
@@ -36,9 +41,14 @@ export default function Header() {
                     <a className="text-[#181113] dark:text-white/80 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#planes" onClick={() => setIsMenuOpen(false)}>Planes</a>
                     <a className="text-[#181113] dark:text-white/80 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#rutinas" onClick={() => setIsMenuOpen(false)}>Rutinas</a>
                     <a className="text-[#181113] dark:text-white/80 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#contacto" onClick={() => setIsMenuOpen(false)}>Contáctame</a>
-                    <button className="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors">
+                    <a
+                        href="https://wa.me/5492215048825?text=Hola%20Cielo%2C%20vengo%20de%20la%20web"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors"
+                    >
                         <span className="truncate">Empieza Ahora</span>
-                    </button>
+                    </a>
                 </div>
             )}
         </header>

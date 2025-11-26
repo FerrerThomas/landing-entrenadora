@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export default function Routines() {
     const routines = [
@@ -24,25 +25,44 @@ export default function Routines() {
 
     return (
         <section className="w-full max-w-6xl px-4 sm:px-10 py-16 sm:py-24" id="rutinas">
-            <h2 className="text-[#181113] dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-8 text-center">Rutinas Específicas</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {routines.map((routine, index) => (
-                    <div key={index} className="flex flex-col bg-background-light dark:bg-background-dark rounded overflow-hidden shadow-lg transition-transform hover:scale-105">
-                        <div
-                            className="w-full h-48 bg-cover bg-center"
-                            style={{ backgroundImage: `url('${routine.image}')` }}
-                            aria-label={routine.alt}
-                        ></div>
-                        <div className="p-6 flex flex-col flex-grow">
-                            <h3 className="text-xl font-bold mb-2 text-[#181113] dark:text-white">{routine.title}</h3>
-                            <p className="text-sm text-[#181113] dark:text-white/80 flex-grow">{routine.description}</p>
-                            <button className="mt-4 flex w-fit items-center justify-center rounded-full h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 transition-colors">
-                                <span className="truncate">+ Info</span>
-                            </button>
-                        </div>
-                    </div>
-                ))}
-            </div>
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+            >
+                <h2 className="text-[#181113] dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-8 text-center">Rutinas Específicas</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {routines.map((routine, index) => (
+                        <motion.div
+                            key={index}
+                            className="flex flex-col bg-background-light dark:bg-background-dark rounded overflow-hidden shadow-lg transition-transform hover:scale-105"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                        >
+                            <div
+                                className="w-full h-48 bg-cover bg-center"
+                                style={{ backgroundImage: `url('${routine.image}')` }}
+                                aria-label={routine.alt}
+                            ></div>
+                            <div className="p-6 flex flex-col flex-grow">
+                                <h3 className="text-xl font-bold mb-2 text-[#181113] dark:text-white">{routine.title}</h3>
+                                <p className="text-sm text-[#181113] dark:text-white/80 flex-grow">{routine.description}</p>
+                                <a
+                                    href={`https://wa.me/5492215048825?text=${encodeURIComponent(`Hola Cielo, me gustaria mas infromacion del Plan ${routine.title}`)}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-4 flex w-fit items-center justify-center rounded-full h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 transition-colors"
+                                >
+                                    <span className="truncate">+ Info</span>
+                                </a>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </motion.div>
         </section>
     );
 }
